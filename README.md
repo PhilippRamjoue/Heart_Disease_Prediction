@@ -1202,6 +1202,6 @@ give a good feeling which features are relevant and have a big impact on
 the model output. Analysing correct predicted *heart disease* and *no
 heart disease* cases show in which manner the presence or absence of a
 feature impact the output. With this knowledge it is explainable why
-incorrectly predicted datapoint set were interpreted this way.
+incorrectly predicted datapoint sets were interpreted this way.
 
 </div>
