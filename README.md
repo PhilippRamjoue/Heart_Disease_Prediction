@@ -21,9 +21,9 @@ Following features are included in the dataset:
   - chol; serum cholestoral in mg/dl
   - fbs; fasting blood sugar \> 120 mg/dl
   - restecg; resting electrocardiographic results (values 0,1,2)
-      - 1 = restecg normal
-      - 2 = restecg wave abnormality
-      - 3 = restecg ventricular hypertrophy
+      - 0 = restecg normal
+      - 1 = restecg wave abnormality
+      - 2 = restecg ventricular hypertrophy
   - thalach; maximum heart rate achieved
   - exang; exercise induced angina
   - oldpeak = ST depression induced by exercise relative to rest
@@ -364,15 +364,10 @@ print('The accuracy is: ' +'{:.1%}'.format(random_score))
 print('The true positive rate is: ' +'{:.1%}'.format(tpr))
 ```
 
-<div class="output stream stderr">
-
-    FixedFormatter should only be used together with FixedLocator
-
-</div>
 
 <div class="output display_data">
 
-![](809f47dd1453bed0bc34578d36132f528db88477.png)
+![](images/random_forest_Confusion_matrix.png)
 
 </div>
 
@@ -399,15 +394,10 @@ print('The accuracy is: ' +'{:.1%}'.format(grad_score))
 print('The true positive rate is: ' +'{:.1%}'.format(tpr))
 ```
 
-<div class="output stream stderr">
-
-    FixedFormatter should only be used together with FixedLocator
-
-</div>
 
 <div class="output display_data">
 
-![](aa40b43a7fc53845a64c9287ee0f272bc58b55e0.png)
+![](images/gradient_boost_Confusion_matrix.png)
 
 </div>
 
@@ -434,15 +424,9 @@ print('The accuracy is: ' +'{:.1%}'.format(lr_score))
 print('The true positive rate is: ' +'{:.1%}'.format(tpr))
 ```
 
-<div class="output stream stderr">
-
-    FixedFormatter should only be used together with FixedLocator
-
-</div>
-
 <div class="output display_data">
 
-![](b0e98e526953d3bf697c15506902ab4ea6fcc13b.png)
+![](images/logistic_regression_Confusion_matrix.png)
 
 </div>
 
@@ -562,743 +546,9 @@ history = model.fit(X_train.astype(np.float32),
     7/7 - 0s - loss: 0.6151 - recall: 0.4706 - accuracy: 0.6818
     Epoch 10/1000
     7/7 - 0s - loss: 0.6062 - recall: 0.5686 - accuracy: 0.7020
-    Epoch 11/1000
-    7/7 - 0s - loss: 0.5729 - recall: 0.7157 - accuracy: 0.7727
-    Epoch 12/1000
-    7/7 - 0s - loss: 0.5652 - recall: 0.6863 - accuracy: 0.7677
-    Epoch 13/1000
-    7/7 - 0s - loss: 0.5811 - recall: 0.7059 - accuracy: 0.7626
-    Epoch 14/1000
-    7/7 - 0s - loss: 0.5677 - recall: 0.7059 - accuracy: 0.7475
-    Epoch 15/1000
-    7/7 - 0s - loss: 0.5521 - recall: 0.7353 - accuracy: 0.7727
-    Epoch 16/1000
-    7/7 - 0s - loss: 0.5561 - recall: 0.7353 - accuracy: 0.7475
-    Epoch 17/1000
-    7/7 - 0s - loss: 0.5384 - recall: 0.7745 - accuracy: 0.7576
-    Epoch 18/1000
-    7/7 - 0s - loss: 0.5119 - recall: 0.7647 - accuracy: 0.7929
-    Epoch 19/1000
-    7/7 - 0s - loss: 0.5063 - recall: 0.8137 - accuracy: 0.8030
-    Epoch 20/1000
-    7/7 - 0s - loss: 0.5060 - recall: 0.8039 - accuracy: 0.8081
-    Epoch 21/1000
-    7/7 - 0s - loss: 0.5039 - recall: 0.7941 - accuracy: 0.8030
-    Epoch 22/1000
-    7/7 - 0s - loss: 0.5074 - recall: 0.7843 - accuracy: 0.8131
-    Epoch 23/1000
-    7/7 - 0s - loss: 0.4812 - recall: 0.7843 - accuracy: 0.8030
-    Epoch 24/1000
-    7/7 - 0s - loss: 0.4830 - recall: 0.7647 - accuracy: 0.8081
-    Epoch 25/1000
-    7/7 - 0s - loss: 0.4812 - recall: 0.8039 - accuracy: 0.8182
-    Epoch 26/1000
-    7/7 - 0s - loss: 0.4636 - recall: 0.8333 - accuracy: 0.8232
-    Epoch 27/1000
-    7/7 - 0s - loss: 0.4745 - recall: 0.7745 - accuracy: 0.7727
-    Epoch 28/1000
-    7/7 - 0s - loss: 0.4683 - recall: 0.8333 - accuracy: 0.8182
-    Epoch 29/1000
-    7/7 - 0s - loss: 0.4502 - recall: 0.8235 - accuracy: 0.8131
-    Epoch 30/1000
-    7/7 - 0s - loss: 0.4521 - recall: 0.8431 - accuracy: 0.8232
-    Epoch 31/1000
-    7/7 - 0s - loss: 0.4591 - recall: 0.7843 - accuracy: 0.7980
-    Epoch 32/1000
-    7/7 - 0s - loss: 0.4287 - recall: 0.8137 - accuracy: 0.8384
-    Epoch 33/1000
-    7/7 - 0s - loss: 0.4357 - recall: 0.8137 - accuracy: 0.8182
-    Epoch 34/1000
-    7/7 - 0s - loss: 0.4469 - recall: 0.8529 - accuracy: 0.8333
-    Epoch 35/1000
-    7/7 - 0s - loss: 0.4299 - recall: 0.8039 - accuracy: 0.8081
-    Epoch 36/1000
-    7/7 - 0s - loss: 0.4370 - recall: 0.8431 - accuracy: 0.8384
-    Epoch 37/1000
-    7/7 - 0s - loss: 0.4305 - recall: 0.8137 - accuracy: 0.8333
-    Epoch 38/1000
-    7/7 - 0s - loss: 0.4112 - recall: 0.8529 - accuracy: 0.8535
-    Epoch 39/1000
-    7/7 - 0s - loss: 0.4093 - recall: 0.8824 - accuracy: 0.8485
-    Epoch 40/1000
-    7/7 - 0s - loss: 0.4299 - recall: 0.8235 - accuracy: 0.8182
-    Epoch 41/1000
-    7/7 - 0s - loss: 0.4144 - recall: 0.8235 - accuracy: 0.8131
-    Epoch 42/1000
-    7/7 - 0s - loss: 0.4000 - recall: 0.8824 - accuracy: 0.8485
-    Epoch 43/1000
-    7/7 - 0s - loss: 0.4285 - recall: 0.8333 - accuracy: 0.8283
-    Epoch 44/1000
-    7/7 - 0s - loss: 0.4404 - recall: 0.8431 - accuracy: 0.8182
-    Epoch 45/1000
-    7/7 - 0s - loss: 0.4110 - recall: 0.8137 - accuracy: 0.8283
-    Epoch 46/1000
-    7/7 - 0s - loss: 0.4007 - recall: 0.8431 - accuracy: 0.8232
-    Epoch 47/1000
-    7/7 - 0s - loss: 0.4023 - recall: 0.8824 - accuracy: 0.8434
-    Epoch 48/1000
-    7/7 - 0s - loss: 0.3789 - recall: 0.8235 - accuracy: 0.8283
-    Epoch 49/1000
-    7/7 - 0s - loss: 0.3792 - recall: 0.8922 - accuracy: 0.8384
-    Epoch 50/1000
-    7/7 - 0s - loss: 0.4137 - recall: 0.8333 - accuracy: 0.8030
-    Epoch 51/1000
-    7/7 - 0s - loss: 0.4298 - recall: 0.8529 - accuracy: 0.8333
-    Epoch 52/1000
-    7/7 - 0s - loss: 0.4407 - recall: 0.8431 - accuracy: 0.8333
-    Epoch 53/1000
-    7/7 - 0s - loss: 0.4019 - recall: 0.8529 - accuracy: 0.8333
-    Epoch 54/1000
-    7/7 - 0s - loss: 0.4002 - recall: 0.8627 - accuracy: 0.8333
-    Epoch 55/1000
-    7/7 - 0s - loss: 0.3952 - recall: 0.8529 - accuracy: 0.8535
-    Epoch 56/1000
-    7/7 - 0s - loss: 0.3858 - recall: 0.8431 - accuracy: 0.8384
-    Epoch 57/1000
-    7/7 - 0s - loss: 0.3994 - recall: 0.8333 - accuracy: 0.8232
-    Epoch 58/1000
-    7/7 - 0s - loss: 0.3955 - recall: 0.8922 - accuracy: 0.8283
-    Epoch 59/1000
-    7/7 - 0s - loss: 0.3712 - recall: 0.8431 - accuracy: 0.8232
-    Epoch 60/1000
-    7/7 - 0s - loss: 0.3631 - recall: 0.8627 - accuracy: 0.8636
-    Epoch 61/1000
-    7/7 - 0s - loss: 0.3647 - recall: 0.8627 - accuracy: 0.8687
-    Epoch 62/1000
-    7/7 - 0s - loss: 0.3953 - recall: 0.8725 - accuracy: 0.8586
-    Epoch 63/1000
-    7/7 - 0s - loss: 0.3861 - recall: 0.8333 - accuracy: 0.8232
-    Epoch 64/1000
-    7/7 - 0s - loss: 0.3710 - recall: 0.8627 - accuracy: 0.8485
-    Epoch 65/1000
-    7/7 - 0s - loss: 0.3869 - recall: 0.8529 - accuracy: 0.8333
-    Epoch 66/1000
-    7/7 - 0s - loss: 0.3812 - recall: 0.8431 - accuracy: 0.8434
-    Epoch 67/1000
-    7/7 - 0s - loss: 0.3939 - recall: 0.8235 - accuracy: 0.8283
-    Epoch 68/1000
-    7/7 - 0s - loss: 0.3631 - recall: 0.8824 - accuracy: 0.8586
-    Epoch 69/1000
-    7/7 - 0s - loss: 0.3608 - recall: 0.8824 - accuracy: 0.8788
-    Epoch 70/1000
-    7/7 - 0s - loss: 0.3939 - recall: 0.8627 - accuracy: 0.8283
-    Epoch 71/1000
-    7/7 - 0s - loss: 0.3568 - recall: 0.8922 - accuracy: 0.8586
-    Epoch 72/1000
-    7/7 - 0s - loss: 0.3734 - recall: 0.8627 - accuracy: 0.8384
-    Epoch 73/1000
-    7/7 - 0s - loss: 0.3961 - recall: 0.8235 - accuracy: 0.8283
-    Epoch 74/1000
-    7/7 - 0s - loss: 0.3657 - recall: 0.8922 - accuracy: 0.8636
-    Epoch 75/1000
-    7/7 - 0s - loss: 0.3731 - recall: 0.8627 - accuracy: 0.8535
-    Epoch 76/1000
-    7/7 - 0s - loss: 0.3856 - recall: 0.8627 - accuracy: 0.8384
-    Epoch 77/1000
-    7/7 - 0s - loss: 0.3826 - recall: 0.8333 - accuracy: 0.8232
-    Epoch 78/1000
-    7/7 - 0s - loss: 0.3638 - recall: 0.8627 - accuracy: 0.8485
-    Epoch 79/1000
-    7/7 - 0s - loss: 0.3518 - recall: 0.9020 - accuracy: 0.8687
-    Epoch 80/1000
-    7/7 - 0s - loss: 0.3621 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 81/1000
-    7/7 - 0s - loss: 0.3750 - recall: 0.8137 - accuracy: 0.8485
-    Epoch 82/1000
-    7/7 - 0s - loss: 0.3710 - recall: 0.8529 - accuracy: 0.8384
-    Epoch 83/1000
-    7/7 - 0s - loss: 0.3784 - recall: 0.8039 - accuracy: 0.8232
-    Epoch 84/1000
-    7/7 - 0s - loss: 0.3590 - recall: 0.8627 - accuracy: 0.8485
-    Epoch 85/1000
-    7/7 - 0s - loss: 0.3756 - recall: 0.8431 - accuracy: 0.8384
-    Epoch 86/1000
-    7/7 - 0s - loss: 0.3514 - recall: 0.8235 - accuracy: 0.8384
-    Epoch 87/1000
-    7/7 - 0s - loss: 0.3769 - recall: 0.8627 - accuracy: 0.8384
-    Epoch 88/1000
-    7/7 - 0s - loss: 0.3247 - recall: 0.8725 - accuracy: 0.8788
-    Epoch 89/1000
-    7/7 - 0s - loss: 0.3478 - recall: 0.8725 - accuracy: 0.8333
-    Epoch 90/1000
-    7/7 - 0s - loss: 0.3698 - recall: 0.8529 - accuracy: 0.8384
-    Epoch 91/1000
-    7/7 - 0s - loss: 0.3841 - recall: 0.8431 - accuracy: 0.8434
-    Epoch 92/1000
-    7/7 - 0s - loss: 0.3542 - recall: 0.8725 - accuracy: 0.8838
-    Epoch 93/1000
-    7/7 - 0s - loss: 0.3752 - recall: 0.8333 - accuracy: 0.8384
-    Epoch 94/1000
-    7/7 - 0s - loss: 0.3391 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 95/1000
-    7/7 - 0s - loss: 0.3790 - recall: 0.8627 - accuracy: 0.8636
-    Epoch 96/1000
-    7/7 - 0s - loss: 0.3486 - recall: 0.8824 - accuracy: 0.8535
-    Epoch 97/1000
-    7/7 - 0s - loss: 0.3451 - recall: 0.8824 - accuracy: 0.8535
-    Epoch 98/1000
-    7/7 - 0s - loss: 0.3571 - recall: 0.8627 - accuracy: 0.8434
-    Epoch 99/1000
-    7/7 - 0s - loss: 0.3138 - recall: 0.8627 - accuracy: 0.8687
-    Epoch 100/1000
-    7/7 - 0s - loss: 0.3542 - recall: 0.8529 - accuracy: 0.8485
-    Epoch 101/1000
-    7/7 - 0s - loss: 0.3646 - recall: 0.8922 - accuracy: 0.8687
-    Epoch 102/1000
-    7/7 - 0s - loss: 0.3452 - recall: 0.8529 - accuracy: 0.8535
-    Epoch 103/1000
-    7/7 - 0s - loss: 0.3530 - recall: 0.8627 - accuracy: 0.8384
-    Epoch 104/1000
-    7/7 - 0s - loss: 0.3467 - recall: 0.8627 - accuracy: 0.8636
-    Epoch 105/1000
-    7/7 - 0s - loss: 0.3494 - recall: 0.8529 - accuracy: 0.8636
-    Epoch 106/1000
-    7/7 - 0s - loss: 0.3318 - recall: 0.8922 - accuracy: 0.8737
-    Epoch 107/1000
-    7/7 - 0s - loss: 0.3289 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 108/1000
-    7/7 - 0s - loss: 0.3475 - recall: 0.8627 - accuracy: 0.8586
-    Epoch 109/1000
-    7/7 - 0s - loss: 0.3576 - recall: 0.8431 - accuracy: 0.8535
-    Epoch 110/1000
-    7/7 - 0s - loss: 0.3601 - recall: 0.8725 - accuracy: 0.8586
-    Epoch 111/1000
-    7/7 - 0s - loss: 0.3593 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 112/1000
-    7/7 - 0s - loss: 0.3486 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 113/1000
-    7/7 - 0s - loss: 0.3267 - recall: 0.9216 - accuracy: 0.8788
-    Epoch 114/1000
-    7/7 - 0s - loss: 0.3571 - recall: 0.9020 - accuracy: 0.8788
-    Epoch 115/1000
-    7/7 - 0s - loss: 0.3277 - recall: 0.8627 - accuracy: 0.8485
-    Epoch 116/1000
-    7/7 - 0s - loss: 0.3116 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 117/1000
-    7/7 - 0s - loss: 0.3111 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 118/1000
-    7/7 - 0s - loss: 0.3393 - recall: 0.8922 - accuracy: 0.8636
-    Epoch 119/1000
-    7/7 - 0s - loss: 0.3446 - recall: 0.8824 - accuracy: 0.8737
-    Epoch 120/1000
-    7/7 - 0s - loss: 0.3473 - recall: 0.8529 - accuracy: 0.8636
-    Epoch 121/1000
-    7/7 - 0s - loss: 0.3697 - recall: 0.9020 - accuracy: 0.8586
-    Epoch 122/1000
-    7/7 - 0s - loss: 0.3613 - recall: 0.8333 - accuracy: 0.8586
-    Epoch 123/1000
-    7/7 - 0s - loss: 0.3248 - recall: 0.8235 - accuracy: 0.8485
-    Epoch 124/1000
-    7/7 - 0s - loss: 0.3472 - recall: 0.8137 - accuracy: 0.8131
-    Epoch 125/1000
-    7/7 - 0s - loss: 0.3133 - recall: 0.8529 - accuracy: 0.8636
-    Epoch 126/1000
-    7/7 - 0s - loss: 0.3303 - recall: 0.9216 - accuracy: 0.8838
-    Epoch 127/1000
-    7/7 - 0s - loss: 0.3386 - recall: 0.8627 - accuracy: 0.8586
-    Epoch 128/1000
-    7/7 - 0s - loss: 0.3390 - recall: 0.8529 - accuracy: 0.8434
-    Epoch 129/1000
-    7/7 - 0s - loss: 0.3445 - recall: 0.8725 - accuracy: 0.8434
-    Epoch 130/1000
-    7/7 - 0s - loss: 0.3312 - recall: 0.8725 - accuracy: 0.8636
-    Epoch 131/1000
-    7/7 - 0s - loss: 0.3407 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 132/1000
-    7/7 - 0s - loss: 0.3413 - recall: 0.8627 - accuracy: 0.8737
-    Epoch 133/1000
-    7/7 - 0s - loss: 0.3559 - recall: 0.8431 - accuracy: 0.8434
-    Epoch 134/1000
-    7/7 - 0s - loss: 0.2967 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 135/1000
-    7/7 - 0s - loss: 0.3513 - recall: 0.8529 - accuracy: 0.8485
-    Epoch 136/1000
-    7/7 - 0s - loss: 0.3491 - recall: 0.8824 - accuracy: 0.8737
-    Epoch 137/1000
-    7/7 - 0s - loss: 0.3464 - recall: 0.8529 - accuracy: 0.8737
-    Epoch 138/1000
-    7/7 - 0s - loss: 0.3239 - recall: 0.9020 - accuracy: 0.8990
-    Epoch 139/1000
-    7/7 - 0s - loss: 0.3180 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 140/1000
-    7/7 - 0s - loss: 0.3300 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 141/1000
-    7/7 - 0s - loss: 0.3155 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 142/1000
-    7/7 - 0s - loss: 0.3387 - recall: 0.8824 - accuracy: 0.8535
-    Epoch 143/1000
-    7/7 - 0s - loss: 0.3306 - recall: 0.8725 - accuracy: 0.8586
-    Epoch 144/1000
-    7/7 - 0s - loss: 0.3273 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 145/1000
-    7/7 - 0s - loss: 0.3103 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 146/1000
-    7/7 - 0s - loss: 0.3058 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 147/1000
-    7/7 - 0s - loss: 0.3078 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 148/1000
-    7/7 - 0s - loss: 0.3422 - recall: 0.8725 - accuracy: 0.8535
-    Epoch 149/1000
-    7/7 - 0s - loss: 0.3387 - recall: 0.8431 - accuracy: 0.8384
-    Epoch 150/1000
-    7/7 - 0s - loss: 0.3261 - recall: 0.8627 - accuracy: 0.8636
-    Epoch 151/1000
-    7/7 - 0s - loss: 0.3058 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 152/1000
-    7/7 - 0s - loss: 0.3078 - recall: 0.8922 - accuracy: 0.8737
-    Epoch 153/1000
-    7/7 - 0s - loss: 0.3215 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 154/1000
-    7/7 - 0s - loss: 0.3422 - recall: 0.8431 - accuracy: 0.8434
-    Epoch 155/1000
-    7/7 - 0s - loss: 0.3256 - recall: 0.9020 - accuracy: 0.8737
-    Epoch 156/1000
-    7/7 - 0s - loss: 0.3618 - recall: 0.8627 - accuracy: 0.8182
-    Epoch 157/1000
-    7/7 - 0s - loss: 0.3223 - recall: 0.8824 - accuracy: 0.8939
-    Epoch 158/1000
-    7/7 - 0s - loss: 0.3414 - recall: 0.8627 - accuracy: 0.8687
-    Epoch 159/1000
-    7/7 - 0s - loss: 0.3187 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 160/1000
-    7/7 - 0s - loss: 0.3308 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 161/1000
-    7/7 - 0s - loss: 0.3230 - recall: 0.8824 - accuracy: 0.8636
-    Epoch 162/1000
-    7/7 - 0s - loss: 0.3188 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 163/1000
-    7/7 - 0s - loss: 0.3138 - recall: 0.9216 - accuracy: 0.8889
-    Epoch 164/1000
-    7/7 - 0s - loss: 0.2992 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 165/1000
-    7/7 - 0s - loss: 0.3136 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 166/1000
-    7/7 - 0s - loss: 0.2936 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 167/1000
-    7/7 - 0s - loss: 0.3487 - recall: 0.8922 - accuracy: 0.8737
-    Epoch 168/1000
-    7/7 - 0s - loss: 0.3208 - recall: 0.9118 - accuracy: 0.8737
-    Epoch 169/1000
-    7/7 - 0s - loss: 0.3117 - recall: 0.9118 - accuracy: 0.8687
-    Epoch 170/1000
-    7/7 - 0s - loss: 0.3344 - recall: 0.8725 - accuracy: 0.8586
-    Epoch 171/1000
-    7/7 - 0s - loss: 0.3349 - recall: 0.8627 - accuracy: 0.8535
-    Epoch 172/1000
-    7/7 - 0s - loss: 0.2893 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 173/1000
-    7/7 - 0s - loss: 0.3066 - recall: 0.8529 - accuracy: 0.8636
-    Epoch 174/1000
-    7/7 - 0s - loss: 0.3107 - recall: 0.9118 - accuracy: 0.8939
-    Epoch 175/1000
-    7/7 - 0s - loss: 0.3233 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 176/1000
-    7/7 - 0s - loss: 0.2887 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 177/1000
-    7/7 - 0s - loss: 0.3043 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 178/1000
-    7/7 - 0s - loss: 0.2961 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 179/1000
-    7/7 - 0s - loss: 0.3112 - recall: 0.8824 - accuracy: 0.8788
-    Epoch 180/1000
-    7/7 - 0s - loss: 0.3075 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 181/1000
-    7/7 - 0s - loss: 0.3033 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 182/1000
-    7/7 - 0s - loss: 0.3232 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 183/1000
-    7/7 - 0s - loss: 0.3094 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 184/1000
-    7/7 - 0s - loss: 0.2774 - recall: 0.9216 - accuracy: 0.9040
-    Epoch 185/1000
-    7/7 - 0s - loss: 0.2801 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 186/1000
-    7/7 - 0s - loss: 0.3090 - recall: 0.9216 - accuracy: 0.8838
-    Epoch 187/1000
-    7/7 - 0s - loss: 0.2949 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 188/1000
-    7/7 - 0s - loss: 0.3224 - recall: 0.8824 - accuracy: 0.8737
-    Epoch 189/1000
-    7/7 - 0s - loss: 0.3018 - recall: 0.8725 - accuracy: 0.8636
-    Epoch 190/1000
-    7/7 - 0s - loss: 0.2859 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 191/1000
-    7/7 - 0s - loss: 0.3022 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 192/1000
-    7/7 - 0s - loss: 0.3017 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 193/1000
-    7/7 - 0s - loss: 0.2994 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 194/1000
-    7/7 - 0s - loss: 0.3146 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 195/1000
-    7/7 - 0s - loss: 0.3075 - recall: 0.9020 - accuracy: 0.8687
-    Epoch 196/1000
-    7/7 - 0s - loss: 0.3156 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 197/1000
-    7/7 - 0s - loss: 0.2940 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 198/1000
-    7/7 - 0s - loss: 0.2903 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 199/1000
-    7/7 - 0s - loss: 0.3245 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 200/1000
-    7/7 - 0s - loss: 0.2895 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 201/1000
-    7/7 - 0s - loss: 0.2916 - recall: 0.8725 - accuracy: 0.8788
-    Epoch 202/1000
-    7/7 - 0s - loss: 0.3397 - recall: 0.8725 - accuracy: 0.8586
-    Epoch 203/1000
-    7/7 - 0s - loss: 0.2932 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 204/1000
-    7/7 - 0s - loss: 0.3206 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 205/1000
-    7/7 - 0s - loss: 0.3045 - recall: 0.9118 - accuracy: 0.8788
-    Epoch 206/1000
-    7/7 - 0s - loss: 0.3158 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 207/1000
-    7/7 - 0s - loss: 0.2937 - recall: 0.9118 - accuracy: 0.9040
-    Epoch 208/1000
-    7/7 - 0s - loss: 0.3065 - recall: 0.8725 - accuracy: 0.8636
-    Epoch 209/1000
-    7/7 - 0s - loss: 0.3121 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 210/1000
-    7/7 - 0s - loss: 0.2746 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 211/1000
-    7/7 - 0s - loss: 0.3053 - recall: 0.9020 - accuracy: 0.8737
-    Epoch 212/1000
-    7/7 - 0s - loss: 0.2992 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 213/1000
-    7/7 - 0s - loss: 0.3081 - recall: 0.8627 - accuracy: 0.8636
-    Epoch 214/1000
-    7/7 - 0s - loss: 0.2706 - recall: 0.8922 - accuracy: 0.8990
-    Epoch 215/1000
-    7/7 - 0s - loss: 0.2885 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 216/1000
-    7/7 - 0s - loss: 0.3071 - recall: 0.9216 - accuracy: 0.8788
-    Epoch 217/1000
-    7/7 - 0s - loss: 0.2844 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 218/1000
-    7/7 - 0s - loss: 0.3035 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 219/1000
-    7/7 - 0s - loss: 0.2925 - recall: 0.9412 - accuracy: 0.9040
-    Epoch 220/1000
-    7/7 - 0s - loss: 0.3023 - recall: 0.8824 - accuracy: 0.8737
-    Epoch 221/1000
-    7/7 - 0s - loss: 0.2814 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 222/1000
-    7/7 - 0s - loss: 0.2913 - recall: 0.9020 - accuracy: 0.8737
-    Epoch 223/1000
-    7/7 - 0s - loss: 0.3009 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 224/1000
-    7/7 - 0s - loss: 0.2910 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 225/1000
-    7/7 - 0s - loss: 0.2894 - recall: 0.8824 - accuracy: 0.8788
-    Epoch 226/1000
-    7/7 - 0s - loss: 0.3055 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 227/1000
-    7/7 - 0s - loss: 0.3220 - recall: 0.8627 - accuracy: 0.8485
-    Epoch 228/1000
-    7/7 - 0s - loss: 0.3039 - recall: 0.8627 - accuracy: 0.8737
-    Epoch 229/1000
-    7/7 - 0s - loss: 0.3070 - recall: 0.8627 - accuracy: 0.8788
-    Epoch 230/1000
-    7/7 - 0s - loss: 0.2775 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 231/1000
-    7/7 - 0s - loss: 0.3082 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 232/1000
-    7/7 - 0s - loss: 0.2701 - recall: 0.9216 - accuracy: 0.8939
-    Epoch 233/1000
-    7/7 - 0s - loss: 0.2814 - recall: 0.8431 - accuracy: 0.8788
-    Epoch 234/1000
-    7/7 - 0s - loss: 0.2976 - recall: 0.8922 - accuracy: 0.8737
-    Epoch 235/1000
-    7/7 - 0s - loss: 0.3023 - recall: 0.9216 - accuracy: 0.8939
-    Epoch 236/1000
-    7/7 - 0s - loss: 0.3140 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 237/1000
-    7/7 - 0s - loss: 0.2799 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 238/1000
-    7/7 - 0s - loss: 0.2953 - recall: 0.8824 - accuracy: 0.8636
-    Epoch 239/1000
-    7/7 - 0s - loss: 0.2938 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 240/1000
-    7/7 - 0s - loss: 0.2954 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 241/1000
-    7/7 - 0s - loss: 0.2701 - recall: 0.9118 - accuracy: 0.9091
-    Epoch 242/1000
-    7/7 - 0s - loss: 0.2999 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 243/1000
-    7/7 - 0s - loss: 0.2901 - recall: 0.8922 - accuracy: 0.8687
-    Epoch 244/1000
-    7/7 - 0s - loss: 0.3058 - recall: 0.8725 - accuracy: 0.8737
-    Epoch 245/1000
-    7/7 - 0s - loss: 0.2906 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 246/1000
-    7/7 - 0s - loss: 0.3166 - recall: 0.8627 - accuracy: 0.8586
-    Epoch 247/1000
-    7/7 - 0s - loss: 0.2826 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 248/1000
-    7/7 - 0s - loss: 0.2961 - recall: 0.8725 - accuracy: 0.8788
-    Epoch 249/1000
-    7/7 - 0s - loss: 0.2966 - recall: 0.9216 - accuracy: 0.8889
-    Epoch 250/1000
-    7/7 - 0s - loss: 0.3098 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 251/1000
-    7/7 - 0s - loss: 0.2984 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 252/1000
-    7/7 - 0s - loss: 0.2683 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 253/1000
-    7/7 - 0s - loss: 0.2810 - recall: 0.9118 - accuracy: 0.9091
-    Epoch 254/1000
-    7/7 - 0s - loss: 0.2968 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 255/1000
-    7/7 - 0s - loss: 0.2709 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 256/1000
-    7/7 - 0s - loss: 0.2757 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 257/1000
-    7/7 - 0s - loss: 0.2833 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 258/1000
-    7/7 - 0s - loss: 0.3039 - recall: 0.8627 - accuracy: 0.8737
-    Epoch 259/1000
-    7/7 - 0s - loss: 0.2884 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 260/1000
-    7/7 - 0s - loss: 0.2900 - recall: 0.8824 - accuracy: 0.8687
-    Epoch 261/1000
-    7/7 - 0s - loss: 0.2621 - recall: 0.8824 - accuracy: 0.8939
-    Epoch 262/1000
-    7/7 - 0s - loss: 0.2843 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 263/1000
-    7/7 - 0s - loss: 0.2934 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 264/1000
-    7/7 - 0s - loss: 0.3022 - recall: 0.9118 - accuracy: 0.8939
-    Epoch 265/1000
-    7/7 - 0s - loss: 0.2575 - recall: 0.8922 - accuracy: 0.9091
-    Epoch 266/1000
-    7/7 - 0s - loss: 0.2863 - recall: 0.8824 - accuracy: 0.8939
-    Epoch 267/1000
-    7/7 - 0s - loss: 0.2723 - recall: 0.9118 - accuracy: 0.9091
-    Epoch 268/1000
-    7/7 - 0s - loss: 0.2814 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 269/1000
-    7/7 - 0s - loss: 0.2839 - recall: 0.8824 - accuracy: 0.8636
-    Epoch 270/1000
-    7/7 - 0s - loss: 0.3105 - recall: 0.8922 - accuracy: 0.8838
-    Epoch 271/1000
-    7/7 - 0s - loss: 0.2974 - recall: 0.8725 - accuracy: 0.8939
-    Epoch 272/1000
-    7/7 - 0s - loss: 0.2902 - recall: 0.8725 - accuracy: 0.8788
-    Epoch 273/1000
-    7/7 - 0s - loss: 0.2532 - recall: 0.8725 - accuracy: 0.8889
-    Epoch 274/1000
-    7/7 - 0s - loss: 0.2729 - recall: 0.8922 - accuracy: 0.8990
-    Epoch 275/1000
-    7/7 - 0s - loss: 0.3025 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 276/1000
-    7/7 - 0s - loss: 0.2701 - recall: 0.9216 - accuracy: 0.9091
-    Epoch 277/1000
-    7/7 - 0s - loss: 0.2824 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 278/1000
-    7/7 - 0s - loss: 0.2609 - recall: 0.9314 - accuracy: 0.9192
-    Epoch 279/1000
-    7/7 - 0s - loss: 0.2887 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 280/1000
-    7/7 - 0s - loss: 0.2510 - recall: 0.9020 - accuracy: 0.9040
-    Epoch 281/1000
-    7/7 - 0s - loss: 0.2558 - recall: 0.9216 - accuracy: 0.9141
-    Epoch 282/1000
-    7/7 - 0s - loss: 0.2635 - recall: 0.9020 - accuracy: 0.9040
-    Epoch 283/1000
-    7/7 - 0s - loss: 0.2895 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 284/1000
-    7/7 - 0s - loss: 0.2569 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 285/1000
-    7/7 - 0s - loss: 0.2644 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 286/1000
-    7/7 - 0s - loss: 0.2661 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 287/1000
-    7/7 - 0s - loss: 0.2803 - recall: 0.8725 - accuracy: 0.8838
-    Epoch 288/1000
-    7/7 - 0s - loss: 0.2784 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 289/1000
-    7/7 - 0s - loss: 0.2580 - recall: 0.9314 - accuracy: 0.9293
-    Epoch 290/1000
-    7/7 - 0s - loss: 0.2791 - recall: 0.8725 - accuracy: 0.8687
-    Epoch 291/1000
-    7/7 - 0s - loss: 0.2755 - recall: 0.9216 - accuracy: 0.9141
-    Epoch 292/1000
-    7/7 - 0s - loss: 0.2964 - recall: 0.8725 - accuracy: 0.8889
-    Epoch 293/1000
-    7/7 - 0s - loss: 0.2718 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 294/1000
-    7/7 - 0s - loss: 0.2874 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 295/1000
-    7/7 - 0s - loss: 0.2734 - recall: 0.9510 - accuracy: 0.9242
-    Epoch 296/1000
-    7/7 - 0s - loss: 0.3009 - recall: 0.9020 - accuracy: 0.8737
-    Epoch 297/1000
-    7/7 - 0s - loss: 0.2959 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 298/1000
-    7/7 - 0s - loss: 0.2713 - recall: 0.9020 - accuracy: 0.8990
-    Epoch 299/1000
-    7/7 - 0s - loss: 0.2875 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 300/1000
-    7/7 - 0s - loss: 0.2645 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 301/1000
-    7/7 - 0s - loss: 0.2816 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 302/1000
-    7/7 - 0s - loss: 0.2879 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 303/1000
-    7/7 - 0s - loss: 0.2626 - recall: 0.9216 - accuracy: 0.9192
-    Epoch 304/1000
-    7/7 - 0s - loss: 0.2767 - recall: 0.8922 - accuracy: 0.8990
-    Epoch 305/1000
-    7/7 - 0s - loss: 0.2896 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 306/1000
-    7/7 - 0s - loss: 0.2529 - recall: 0.8922 - accuracy: 0.8939
-    Epoch 307/1000
-    7/7 - 0s - loss: 0.2628 - recall: 0.9314 - accuracy: 0.9040
-    Epoch 308/1000
-    7/7 - 0s - loss: 0.2760 - recall: 0.9118 - accuracy: 0.9091
-    Epoch 309/1000
-    7/7 - 0s - loss: 0.2593 - recall: 0.9020 - accuracy: 0.8990
-    Epoch 310/1000
-    7/7 - 0s - loss: 0.2663 - recall: 0.9020 - accuracy: 0.8990
-    Epoch 311/1000
-    7/7 - 0s - loss: 0.3037 - recall: 0.9118 - accuracy: 0.8939
-    Epoch 312/1000
-    7/7 - 0s - loss: 0.2539 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 313/1000
-    7/7 - 0s - loss: 0.2908 - recall: 0.8824 - accuracy: 0.8687
-    Epoch 314/1000
-    7/7 - 0s - loss: 0.2591 - recall: 0.9314 - accuracy: 0.9040
-    Epoch 315/1000
-    7/7 - 0s - loss: 0.2635 - recall: 0.9314 - accuracy: 0.9040
-    Epoch 316/1000
-    7/7 - 0s - loss: 0.2422 - recall: 0.9118 - accuracy: 0.9242
-    Epoch 317/1000
-    7/7 - 0s - loss: 0.3040 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 318/1000
-    7/7 - 0s - loss: 0.2710 - recall: 0.8725 - accuracy: 0.8889
-    Epoch 319/1000
-    7/7 - 0s - loss: 0.2608 - recall: 0.9216 - accuracy: 0.8990
-    Epoch 320/1000
-    7/7 - 0s - loss: 0.2805 - recall: 0.9118 - accuracy: 0.9141
-    Epoch 321/1000
-    7/7 - 0s - loss: 0.2768 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 322/1000
-    7/7 - 0s - loss: 0.2651 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 323/1000
-    7/7 - 0s - loss: 0.2927 - recall: 0.9118 - accuracy: 0.8990
-    Epoch 324/1000
-    7/7 - 0s - loss: 0.2761 - recall: 0.8824 - accuracy: 0.8939
-    Epoch 325/1000
-    7/7 - 0s - loss: 0.2736 - recall: 0.8627 - accuracy: 0.8939
-    Epoch 326/1000
-    7/7 - 0s - loss: 0.2601 - recall: 0.9118 - accuracy: 0.9040
-    Epoch 327/1000
-    7/7 - 0s - loss: 0.2980 - recall: 0.8922 - accuracy: 0.8889
-    Epoch 328/1000
-    7/7 - 0s - loss: 0.2505 - recall: 0.9020 - accuracy: 0.9040
-    Epoch 329/1000
-    7/7 - 0s - loss: 0.2644 - recall: 0.9216 - accuracy: 0.8990
-    Epoch 330/1000
-    7/7 - 0s - loss: 0.2584 - recall: 0.9510 - accuracy: 0.9192
-    Epoch 331/1000
-    7/7 - 0s - loss: 0.2610 - recall: 0.9118 - accuracy: 0.8889
-    Epoch 332/1000
-    7/7 - 0s - loss: 0.2791 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 333/1000
-    7/7 - 0s - loss: 0.2332 - recall: 0.9216 - accuracy: 0.9141
-    Epoch 334/1000
-    7/7 - 0s - loss: 0.2605 - recall: 0.9216 - accuracy: 0.9091
-    Epoch 335/1000
-    7/7 - 0s - loss: 0.2880 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 336/1000
-    7/7 - 0s - loss: 0.2577 - recall: 0.9020 - accuracy: 0.8939
-    Epoch 337/1000
-    7/7 - 0s - loss: 0.2348 - recall: 0.9314 - accuracy: 0.9091
-    Epoch 338/1000
-    7/7 - 0s - loss: 0.2400 - recall: 0.9412 - accuracy: 0.9242
-    Epoch 339/1000
-    7/7 - 0s - loss: 0.2692 - recall: 0.9216 - accuracy: 0.9192
-    Epoch 340/1000
-    7/7 - 0s - loss: 0.2677 - recall: 0.9118 - accuracy: 0.9040
-    Epoch 341/1000
-    7/7 - 0s - loss: 0.2805 - recall: 0.9020 - accuracy: 0.8838
-    Epoch 342/1000
-    7/7 - 0s - loss: 0.2685 - recall: 0.9118 - accuracy: 0.9091
-    Epoch 343/1000
-    7/7 - 0s - loss: 0.2584 - recall: 0.9020 - accuracy: 0.8990
-    Epoch 344/1000
-    7/7 - 0s - loss: 0.2522 - recall: 0.9118 - accuracy: 0.8939
-    Epoch 345/1000
-    7/7 - 0s - loss: 0.2792 - recall: 0.8922 - accuracy: 0.8788
-    Epoch 346/1000
-    7/7 - 0s - loss: 0.2578 - recall: 0.9216 - accuracy: 0.9091
-    Epoch 347/1000
-    7/7 - 0s - loss: 0.2628 - recall: 0.9216 - accuracy: 0.8838
-    Epoch 348/1000
-    7/7 - 0s - loss: 0.2973 - recall: 0.8725 - accuracy: 0.8838
-    Epoch 349/1000
-    7/7 - 0s - loss: 0.2703 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 350/1000
-    7/7 - 0s - loss: 0.2553 - recall: 0.9216 - accuracy: 0.9141
-    Epoch 351/1000
-    7/7 - 0s - loss: 0.2617 - recall: 0.9020 - accuracy: 0.9040
-    Epoch 352/1000
-    7/7 - 0s - loss: 0.2533 - recall: 0.9314 - accuracy: 0.9141
-    Epoch 353/1000
-    7/7 - 0s - loss: 0.2586 - recall: 0.9020 - accuracy: 0.9141
-    Epoch 354/1000
-    7/7 - 0s - loss: 0.2520 - recall: 0.8824 - accuracy: 0.8990
-    Epoch 355/1000
-    7/7 - 0s - loss: 0.2570 - recall: 0.9020 - accuracy: 0.9091
-    Epoch 356/1000
-    7/7 - 0s - loss: 0.2752 - recall: 0.8824 - accuracy: 0.8939
-    Epoch 357/1000
-    7/7 - 0s - loss: 0.2610 - recall: 0.8725 - accuracy: 0.8838
-    Epoch 358/1000
-    7/7 - 0s - loss: 0.2678 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 359/1000
-    7/7 - 0s - loss: 0.2471 - recall: 0.9118 - accuracy: 0.8939
-    Epoch 360/1000
-    7/7 - 0s - loss: 0.2653 - recall: 0.9020 - accuracy: 0.9091
-    Epoch 361/1000
-    7/7 - 0s - loss: 0.2802 - recall: 0.8824 - accuracy: 0.8889
-    Epoch 362/1000
-    7/7 - 0s - loss: 0.2486 - recall: 0.9216 - accuracy: 0.9091
-    Epoch 363/1000
-    7/7 - 0s - loss: 0.2767 - recall: 0.8725 - accuracy: 0.8939
-    Epoch 364/1000
-    7/7 - 0s - loss: 0.2776 - recall: 0.8725 - accuracy: 0.8939
-    Epoch 365/1000
-    7/7 - 0s - loss: 0.2364 - recall: 0.9510 - accuracy: 0.9343
-    Epoch 366/1000
-    7/7 - 0s - loss: 0.2532 - recall: 0.8725 - accuracy: 0.8939
-    Epoch 367/1000
-    7/7 - 0s - loss: 0.2433 - recall: 0.9020 - accuracy: 0.9141
-    Epoch 368/1000
-    7/7 - 0s - loss: 0.2532 - recall: 0.9118 - accuracy: 0.9040
-    Epoch 369/1000
-    7/7 - 0s - loss: 0.2567 - recall: 0.9216 - accuracy: 0.9091
-    Epoch 370/1000
-    7/7 - 0s - loss: 0.2669 - recall: 0.8824 - accuracy: 0.8838
-    Epoch 371/1000
-    7/7 - 0s - loss: 0.2487 - recall: 0.8922 - accuracy: 0.9040
-    Epoch 372/1000
-    7/7 - 0s - loss: 0.2543 - recall: 0.9020 - accuracy: 0.8889
-    Epoch 373/1000
-    7/7 - 0s - loss: 0.2353 - recall: 0.9118 - accuracy: 0.9141
-    Epoch 374/1000
-    7/7 - 0s - loss: 0.2597 - recall: 0.9314 - accuracy: 0.9242
-    Epoch 375/1000
-    7/7 - 0s - loss: 0.2648 - recall: 0.8922 - accuracy: 0.9040
-    Epoch 376/1000
-    7/7 - 0s - loss: 0.2755 - recall: 0.8922 - accuracy: 0.8990
-    Epoch 377/1000
-    7/7 - 0s - loss: 0.2385 - recall: 0.9216 - accuracy: 0.9141
-    Epoch 378/1000
-    7/7 - 0s - loss: 0.2586 - recall: 0.9216 - accuracy: 0.9040
-    Epoch 379/1000
+    .
+    .
+    .
     7/7 - 0s - loss: 0.2594 - recall: 0.8922 - accuracy: 0.9091
     Epoch 380/1000
     7/7 - 0s - loss: 0.2605 - recall: 0.9118 - accuracy: 0.8990
@@ -1350,15 +600,10 @@ fig_SI.show()
 
 </div>
 
-<div class="output stream stderr">
-
-    Matplotlib is currently using module://ipykernel.pylab.backend_inline, which is a non-GUI backend, so cannot show the figure.
-
-</div>
 
 <div class="output display_data">
 
-![](2b8db79146512bbfec8f6ed97402bdb280022fcf.png)
+![](images/loss.PNG)
 
 </div>
 
@@ -1378,15 +623,9 @@ print('The accuracy is: ' +'{:.1%}'.format(eval_results[2]))
 print('The true positive rate is: ' +'{:.1%}'.format(tpr))
 ```
 
-<div class="output stream stderr">
-
-    FixedFormatter should only be used together with FixedLocator
-
-</div>
-
 <div class="output display_data">
 
-![](d74b5f951ba35a41fab360fa1c786590611ae2f5.png)
+![](images/neural_net_Confusion_matrix.png)
 
 </div>
 
@@ -1406,10 +645,9 @@ training was successful.
 
 For later analysis it's interesting to know which datapoints were
 incorrectly predicted. For this the incorrect predicted datapoint sets
-are separated in "not predicted (pred = 0) as heart disease (y\_true =
-1)" (\_heart\_\_disease\_\_predicion\_\_wrong\_) and "predicted (pred =
-1) as heart disease (y\_true = 0)"
-(\_no\_\_heart\_\_disease\_\_predicion\_*wrong*). It is interesting to
+are separated in "not predicted (pred = 0) as heart disease (y_true =1)"
+(_heart__disease__predicion__wrong_) and "predicted (pred =1) as heart disease
+(y_true = 0)"(_no__heart__disease__predicion_wrong). It is interesting to
 analyse which features influenced the result in such a way that it
 became wrong.
 
@@ -1482,27 +720,7 @@ shap.summary_plot(shap_values, X_test_flatten, feature_names=col_names)
 
 <div class="output display_data">
 
-    <IPython.core.display.HTML object>
-
-</div>
-
-<div class="output stream stdout">
-
-    WARNING:tensorflow:From c:\users\ramjoue\pycharmprojects\kessel_ki_repo\venv\lib\site-packages\shap\explainers\_deep\deep_tf.py:239: set_learning_phase (from tensorflow.python.keras.backend) is deprecated and will be removed after 2020-10-11.
-    Instructions for updating:
-    Simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
-
-</div>
-
-<div class="output stream stderr">
-
-    keras is no longer supported, please use tf.keras instead.
-
-</div>
-
-<div class="output display_data">
-
-![](854b736ffe4c65888ceb9ed414327661a6a452e4.png)
+![](images/summary_plot.PNG)
 
 </div>
 
@@ -1511,11 +729,11 @@ shap.summary_plot(shap_values, X_test_flatten, feature_names=col_names)
 <div class="cell markdown" data-collapsed="false" data-pycharm="{&quot;name&quot;:&quot;#%% md\n&quot;}">
 
 This chart shows the average impact of the dataset features on the model
-output. It's visible that the feature \_major\_\_vessels\_*0.0* has the
+output. It's visible that the feature _major__vessels_0.0 has the
 biggest impact on the model output. The value 0 means that no major
 vessels are visible on the flourosopy picture. It's a significant
 feature of a heart disease. On the other hand a large number of major
-vessels like the feature \_major\_\_vessels\_*3.0* is an indicator of a
+vessels like the feature _major__vessels_3.0 is an indicator of a
 low heart disease probability.
 
 It's also visible that the feature chest pain (as typical angina and non
@@ -1570,9 +788,10 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="84">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a38d0>
+<div class="output display_data">
+
+![](images/heart_disease_1.png)
 
 </div>
 
@@ -1584,12 +803,12 @@ This datapoint set has a probability of 96% to be a *heart disease*
 (true label is also heart disease). This **force plot** visualizes the
 features that increase (red arrows) and decrease (blue arrows) the
 probabilty value. Starting from the average model output value (base
-value \~0.52) the features are summed up.
+value ~0.52) the features are summed up.
 
 The result seems to be realistic. The presence of zero visible major
-vessels (\_major\_\_vessels\_*0.0 = 1*) and a fixed defect thalassaemia
-(\_thal\_\_fixed\_*defect = 1*) and the absence of normal chest pain
-(\_chest\_\_pain\_\_typical\_\_angina = 0\_) is very significant for a
+vessels (_major__vessels_0.0 = 1_) and a fixed defect thalassaemia
+(_thal__fixed_defect = 1_) and the absence of normal chest pain
+(_chest__pain__typical__angina = 0_) is very significant for a
 heart disease. As visible in the above chart this three features have
 the biggest impact on the output.
 
@@ -1608,9 +827,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="85">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a3978>
+![](images/heart_disease_2.png)
 
 </div>
 
@@ -1622,14 +841,14 @@ This datapoint set has a probability of 72% to be a *heart disease*
 (true label is also heart disease).
 
 The result also seems to be realistic. The presence of zero visible
-major vessels (\_major\_\_vessels\_*0.0 = 1*) and of non anginal chest
-pain (\_chest\_\_pain\_\_non\_\_anginal\_*pain = 1*) is very significant
-for a heart disease. Additionally the fact that the patient is a woman
-(*sex = 0*) increases the heart disease probability.
+major vessels (_major__vessels__0.0 = 1_) and of non anginal chest
+pain (_chest__pain__non__anginal__pain = 1_) is very significant
+for a heart disease. Additionally, the fact that the patient is a woman
+(_sex = 0_) increases the heart disease probability.
 
 Compared to the previous force plot the probability of 72% is lower than
 96%. This is due to an absence of the "high impact" feature fixed defect
-thalassaemia (\_thal\_\_fixed\_*defect = 0*) that decreases the output
+thalassaemia (_thal__fixed__defect = 0_) that decreases the output
 value.
 
 </div>
@@ -1647,9 +866,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="86">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca7eb978>
+![](images/heart_disease_3.png)
 
 </div>
 
@@ -1663,11 +882,11 @@ This datapoint set has a probability of 59% to be a *heart disease*
 The result also seems to be realistic because "high impact" features are
 in balance and it seems really not to be clear if it is a heart disease
 or not. This is reflected in a probability of 59%. On the one hand the
-presence of zero visible major vessels (\_major\_\_vessels\_*0.0 = 1*)
-and an ansymptomatic chest pain (\_chest\_\_pain\_*asymptomatic = 1*)
+presence of zero visible major vessels (_major__vessels_0.0 = 1_)
+and an ansymptomatic chest pain (_chest__pain__asymptomatic = 1_)
 and on the other hand the absence of a fixed defect thalassaemia
-(\_thal\_\_fixed\_*defect = 0*) but a presence of a reversable defect
-thalassaemia (\_thal\_\_reversable\_*defect = 1*) balance each other
+(_thal__fixed__defect = 0_) but a presence of a reversable defect
+thalassaemia (_thal__reversable__defect = 1_) balance each other
 out.
 
 </div>
@@ -1695,9 +914,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="87">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca7eb3c8>
+![](images/no_heart_disease_0.png)
 
 </div>
 
@@ -1709,12 +928,12 @@ This datapoint set has a probability of 21% to be a *heart disease*
 (true label is also no heart disease).
 
 The result also seems to be realistic. There is a presence of zero
-visible major vessels (\_major\_\_vessels\_*0.0 = 1*), but also a
-presence of normal thalassaemia (\_thal\_\_normal = 1\_) and a absence
-of a fixed thalassaemia defect (\_thal\_\_fixed\_*defect = 0*).
+visible major vessels (_major__vessels__0.0 = 1_), but also a
+presence of normal thalassaemia (_thal__normal = 1_) and a absence
+of a fixed thalassaemia defect (_thal__fixed__defect = 0_).
 Additionally, it is a typical angina chest pain
-(\_chest\_\_pain\_\_typical\_\_angina = 1\_) and the angina was induced
-by exercise (\_exercise\_\_induced\_*angina = 1*). The patient seems to
+(_chest__pain__typical__angina = 1_) and the angina was induced
+by exercise (_exercise__induced__angina = 1_). The patient seems to
 have a problem but not a heart disease.
 
 </div>
@@ -1732,9 +951,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="88">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca7eb160>
+![](images/no_heart_disease_7.png)
 
 </div>
 
@@ -1746,10 +965,10 @@ This datapoint set has a probability of 1% to be a *heart disease* (true
 label is also no heart disease).
 
 The result also seems to be realistic and significant. There is a
-presence of one visible major vessels (\_major\_\_vessels\_*1.0 = 1*), a
-reversable thalassaemia defect (\_thal\_\_reversable\_*defect = 1*) and
-the angina was induced by exercise (\_exercise\_\_induced\_*angina =
-1*). The patient seems to have a problem but not a heart disease.
+presence of one visible major vessels (_major__vessels__1.0 = 1_), a
+reversable thalassaemia defect (_thal__reversable__defect = 1_) and
+the angina was induced by exercise (_exercise__induced__angina =
+1_). The patient seems to have a problem but not a heart disease.
 
 </div>
 
@@ -1766,9 +985,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="89">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca7eb710>
+![](images/no_heart_disease_8.png)
 
 </div>
 
@@ -1780,10 +999,10 @@ This datapoint set has a probability of 0% to be a *heart disease* (true
 label is also no heart disease).
 
 The result also seems to be realistic and significant. There is a
-presence of one visible major vessels (\_major\_\_vessels\_*1.0 = 1*), a
-typical angina chest pain (\_chest\_\_pain\_\_typical\_\_angina = 1\_)
-and the angina was induced by exercise (\_exercise\_\_induced\_*angina =
-1*). The patient seems to have a problem but not a heart disease.
+presence of one visible major vessels (_major__vessels__1.0 = 1_), a
+typical angina chest pain (_chest__pain__typical__angina = 1_)
+and the angina was induced by exercise (_exercise__induced__angina =
+1_). The patient seems to have a problem but not a heart disease.
 
 </div>
 
@@ -1791,8 +1010,8 @@ and the angina was induced by exercise (\_exercise\_\_induced\_*angina =
 
 #### Heart disease datapoints incorrectly predicted as no heart disease
 
-The next three datapoint sets are initially labeled as *heart disease*
-but they are predicted to be *no heart disease*
+The next three datapoint sets are initially labeled as _heart disease_
+but they are predicted to be _no heart disease_
 
 </div>
 
@@ -1810,9 +1029,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="90">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a3668>
+![](images/heart_disease_prediction_wrong_6.png)
 
 </div>
 
@@ -1832,9 +1051,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="91">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca7eb438>
+![](images/heart_disease_prediction_wrong_10.png)
 
 </div>
 
@@ -1854,9 +1073,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="92">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a3908>
+![](images/heart_disease_prediction_wrong_23.png)
 
 </div>
 
@@ -1866,17 +1085,17 @@ plot
 
 Checking out the three plots shows the probabilities of 21%, 48% and
 16%. On one side the datapoint set with 48% is in the middle and could
-be both a *heart disease* and *no heart disease* on the other side 21%
+be both a _heart disease_ and _no heart disease_ on the other side 21%
 and 16% are very significant.
 
 An analysis of the three plots shows a presence of zero visible major
-vessels (\_major\_\_vessels\_*0.0 = 1*). This is the most significant
+vessels (_major__vessels__0.0 = 1_). This is the most significant
 feature for a heart disease. Additionally, all three patients had a
-typical angina chest pain (\_chest\_\_pain\_\_typical\_\_angina = 1\_)
+typical angina chest pain (_chest__pain__typical__angina = 1_)
 and in two cases the angina was induced by exercise
-(\_exercise\_\_induced\_*angina = 1*). Both features were also present
-in the *no heart disease* datapoint sets. It is also noticeable that in
-this "wrong prediction cases" the feature *oldpeak* is present.
+(_exercise__induced__angina = 1_). Both features were also present
+in the _no heart disease_ datapoint sets. It is also noticeable that in
+this "wrong prediction cases" the feature _oldpeak_ is present.
 
 </div>
 
@@ -1903,9 +1122,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="93">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca108dd8>
+![](images/no_heart_disease_prediction_wrong_4.png)
 
 </div>
 
@@ -1925,9 +1144,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="94">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a3278>
+![](images/no_heart_disease_prediction_wrong_17.png)
 
 </div>
 
@@ -1947,9 +1166,9 @@ shap.save_html(path_to_file,plot)
 plot
 ```
 
-<div class="output execute_result" data-execution_count="95">
+<div class="output display_data">
 
-    <shap.plots._force.AdditiveForceVisualizer at 0x199ca2a3208>
+![](images/no_heart_disease_prediction_wrong_21.png)
 
 </div>
 
@@ -1963,11 +1182,11 @@ be both a *heart disease* and *no heart disease* on the other side 81%
 and 72% are very significant.
 
 An analysis of the three plots shows a presence of a fixed defect
-thalassaemia (\_thal\_\_fixed\_*defect = 0*) and in two of three cases
-zero visible major vessels (\_major\_\_vessels\_*0.0 = 1*). This are
+thalassaemia (_thal__fixed__defect = 0_) and in two of three cases
+zero visible major vessels (_major__vessels__0.0 = 1_). This are
 very significant feature for a heart disease. Additionally, in two cases
 the chest pain is not a typical angina
-(\_chest\_\_pain\_\_typical\_\_angina = 0\_), normally a typical angina
+(_chest__pain__typical__angina = 0_), normally a typical angina
 is a significant feature of no heart disease.
 
 </div>
